@@ -48,7 +48,7 @@ class TestViewResponses(TestCase):
         Example: code validation, search HTML for text
         """
         request = HttpRequest()
-        response = all_products(request)
+        response = product_all(request)
         html = response.content.decode('utf8')
         self.assertIn('<title>Home</title>', html)
         self.assertTrue(html.startswith('\n<!DOCTYPE html>\n'))
